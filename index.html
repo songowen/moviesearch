@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>finding my movie</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="container2">
+        <h2>Finding movie</h2>
+        <blockquote>
+          The cinema has no boundary; it is a ribbon of dream.<br />
+          <cite>-Orson Welles</cite>
+        </blockquote>
+
+        <div class="title-search">
+          <input
+            type="text"
+            class="search-content"
+            placeholder="Enter an movie title"
+            id="search-input"
+          />
+          <button onclick = "getTitle" type="submit" class="search-btn btn" id="search-btn">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+
+        <div class = "title-result">
+            <h2 class = "title">Your Search Results:</h2>
+        </div>
+      </div>
+    </div>
+
+    <script scr="script.js"></script>
+  </body>
+</html>
