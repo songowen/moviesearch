@@ -1,2 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Hahmlet&family=Noto+Sans+KR:wght@400;600&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Young+Serif&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+}
 
-  @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Hahmlet&family=Noto+Sans+KR:wght@400;600&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Young+Serif&display=swap');
+body {
+  line-height: 1.6;
+  background-color: pink;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin: 40px 0 60px 0;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 40px 0 60px 0;
+  line-height: 0;
+}
+
+h6 {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin: 40px 0 60px 0;
+  line-height: 0;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+#search-input {
+  width: 60%;
+  max-width: 400px;
+  padding: 10px 20px;
+  border: none;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  font-size: 18px;
+  color: #333;
+}
+
+#search-btn {
+  padding: 10px 20px;
+  background-color: #0c0909;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.movies {
+  width: 1280px;
+background-color: pink;
+  margin: 0 auto;
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.movies .movie {
+  width: 299px;
+  max-height: 500px;
+  box-shadow: 1px 1px 8px 2px white;
+  box-sizing: border-box;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+.movies .movie .movieTitle {
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+}
+
+.movies .movie .movieInner {
+  position: relative;
+  overflow: hidden;
+  height: 429px;
+}
+
+.movies .movie .movieInner .movieImg {
+  width: 100%;
+  height: auto;
+}
+
+.movies .movie .movieInner .movieImg img {
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.movies .movie .movieInner .movieContent {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: all 0.5s;
+}
+
+.movies .movie:hover .movieInner .movieContent {
+  top: 0;
+}
+
+.movies .movie .movieInner .movieContent .rating {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.movies .movie .movieInner .movieContent .summary {
+  font-size: 16px;
+}
+
+
+
+
+
+
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 10%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
