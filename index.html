@@ -15,53 +15,37 @@
   </head>
 
   <body>
+    <header>
+      <div id="current-time-weather">
+        <div id="WhatTimeIsItNow"></div>
+        <div id="weather"></div>
+      </div>
+    </header>
+
     <div class="container">
-          <h2>Finding movieeeee</h2>
-        <h6>
-          <blockquote>
-            <h6>The cinema has no boundary; it is a ribbon of dream.</h6>
-            <cite>-Orson Welles</cite>
-          </blockquote>
-        </h6>
+      <div class="title"><h1>MOVING MOVIE!</h1></div>
 
-        <form action="">
-          <input
-            type="text"
-            class="search-content"
-            placeholder="Enter an movie title"
-            id="search-input"
-          />
-          <button
-            onclick="getTitle"
-            type="submit"
-            class="search-btn"
-            id="search-btn"
-          >
+      <form action="" id="search-form">
+        <input
+          type="text"
+          class="search-content"
+          placeholder="Enter a movie title"
+          id="search-input"
+        />
+        <button
+          onclick="getTitle"
+          type="submit"
+          class="search-btn"
+          id="search-btn"
+        >
           <i class="fas fa-search"></i>
-          </button>
-        </form>
-      </div>
- 
-      <main>
-        <div class="movies">
-   
-      </div>
-      </main>
-      <ul id="movie-list" ></ul>
-      <div id="myNav" class="overlay">
+        </button>
+      </form>
+    </div>
 
-        <!-- Button to close the overlay navigation -->
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      
-        <!-- Overlay content -->
-        <div class="overlay-content" id="overlay-content"></div>
-        
-        <a href="javascript:void(0)" class="arrow left-arrow" id="left-arrow">&#8656;</a> 
-        
-        <a href="javascript:void(0)" class="arrow right-arrow" id="right-arrow" >&#8658;</a>
-
-      </div>
-   
+    <main>
+      <div class="movies"></div>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
